@@ -23,7 +23,7 @@ ivalue = 0
 def adjust_speed(left_speed, right_speed, error):
     global last_error, ivalue
     ivalue += error
-    speed_change = (Kp * error + (Ki * ivalue) + Kd * (error - last_error)) #* (left_speed / 200)
+    speed_change = Kp * error + (Ki * ivalue) + Kd * (error - last_error)
     print("error: {}, derivative: {}, integral: {}".format(e, Kd * (error - last_error),  Ki * ivalue))
     last_error = error
     return left_speed - speed_change, right_speed + speed_change
@@ -47,7 +47,6 @@ if __name__ == "__main__":
             new_left, new_right = adjust_speed(left_speed, right_speed, e)
             left.run_forever(speed_sp=new_left)
             right.run_forever(speed_sp=new_right)
-            # time.sleep(0.015)
     finally:
         left.stop()
         right.stop()
