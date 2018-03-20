@@ -4,7 +4,8 @@ This repository contains source code for simple EV3 line follower using PID cont
 
 ## Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kuj4zojKGlo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+Video of robot is available at:
+https://www.youtube.com/watch?v=kuj4zojKGlo
 
 ## Robot Design
 
